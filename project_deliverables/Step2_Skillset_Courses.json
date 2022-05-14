@@ -1,0 +1,36 @@
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/$metadata#skillsets/$entity",
+    "@odata.etag": "\"0x8DA350BD8877C04\"",
+    "name": "azuretable-skillset",
+    "description": "Skillset created from the portal. skillsetName: azuretable-skillset; contentField: PartitionKey; enrichmentGranularity: document; knowledgeStoreStorageAccount: ;",
+    "skills": [
+      {
+        "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+        "name": "#1",
+        "description": null,
+        "context": "/document/PartitionKey",
+        "defaultLanguageCode": "en",
+        "maxKeyPhraseCount": null,
+        "modelVersion": null,
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/PartitionKey"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "keyPhrases",
+            "targetName": "keyphrases"
+          }
+        ]
+      }
+    ],
+    "cognitiveServices": {
+      "@odata.type": "#Microsoft.Azure.Search.CognitiveServicesByKey",
+      "description": "/subscriptions/032d48f9-7c15-4094-ad11-35fc8a6182bc/resourceGroups/udacity-kb-module/providers/Microsoft.CognitiveServices/accounts/hr-materials-cognitive-svc",
+      "key": "9645961951944f8294393692617d1143"
+    },
+    "knowledgeStore": null,
+    "encryptionKey": null
+  }

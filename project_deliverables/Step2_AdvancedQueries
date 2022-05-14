@@ -1,0 +1,295 @@
+Query 1: search=big%20data%20&%24filter=%20rating_average%20gt%204.7%20and%20rating_count%20gt%2010000
+
+https://<COGSEARCH_NAME>.search.windows.net/indexes/azuretable-index/docs?api-version=2021-04-30-Preview&search=big%20data%20&%24filter=%20rating_average%20gt%204.7%20and%20rating_count%20gt%2010000
+{
+  "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 2.2476282,
+      "PartitionKey": "ms-learn",
+      "Timestamp": "2022-05-13T02:15:41.713Z",
+      "Key": "ms-learn0479d887-32ce-477b-b184-9230e096562a",
+      "duration": 34,
+      "instructor": "",
+      "level": "beginner",
+      "product": "azure-machine-learning",
+      "rating_average": 4.78,
+      "rating_count": 10997,
+      "role": "data-scientist",
+      "source": "MS Learn",
+      "title": "Get started with AI on Azure",
+      "keyphrases": [
+        "ms",
+        "learn"
+      ]
+    }
+}
+
+Query 2: search=* & $select=rating_average,title
+
+https://<COGSEARCH_NAME>.search.windows.net/indexes/azuretable-index/docs?api-version=2021-04-30-Preview&search=*%20&%20%24select=rating_average%2Ctitle
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 1,
+        "rating_average": 4.6,
+        "title": "O365"
+      },
+      {
+        "@search.score": 1,
+        "rating_average": 4.8,
+        "title": "Security for database code"
+      },
+      {
+        "@search.score": 1,
+        "rating_average": 4.9,
+        "title": "Onboarding - Technology Policies "
+      },
+      {
+        "@search.score": 1,
+        "rating_average": 3.9,
+        "title": "Maps"
+      },
+      ...
+    ]
+}
+
+Query 3: search=* & $select= title,rating_average,instructor &$facet=rating_average  & $filter=level eq 'advanced'
+
+https://<COGSEARCH_NAME>.search.windows.net/indexes/azuretable-index/docs?api-version=2021-04-30-Preview&search=*%20&%20%24select=%20title%2Crating_average%2Cinstructor%20&%24facet=rating_average%20%20&%20%24filter=level%20eq%20'advanced'
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.8,
+        "title": "Security for database code"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.3,
+        "title": "Security for database admins"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.2,
+        "title": "Encryption and security"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.75,
+        "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "",
+        "rating_average": 4.67,
+        "title": "Secure Cognitive Services"
+      }
+    ]
+  }
+
+Query 4: search=* & $select= title,rating_average,instructor,role&facet=role & $filter=instructor eq 'Eileen Diaz'
+
+https://<COGSEARCH_NAME>.search.windows.net/indexes/azuretable-index/docs?api-version=2021-04-30-Preview&search=*%20&%20%24select=%20title%2Crating_average%2Cinstructor%2Crole&facet=role%20&%20%24filter=instructor%20eq%20'Eileen%20Diaz'
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "@search.facets": {
+      "role": [
+        {
+          "count": 2,
+          "value": "architect"
+        },
+        {
+          "count": 2,
+          "value": "developer"
+        },
+        {
+          "count": 1,
+          "value": "admin"
+        }
+      ]
+    },
+    "value": [
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.8,
+        "role": "developer",
+        "title": "Security for database code"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.3,
+        "role": "architect",
+        "title": "Ethics in AI"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.3,
+        "role": "admin",
+        "title": "Security for database admins"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.2,
+        "role": "architect",
+        "title": "Encryption and security"
+      },
+      {
+        "@search.score": 1,
+        "instructor": "Eileen Diaz",
+        "rating_average": 4.4,
+        "role": "developer",
+        "title": "Code security"
+      }
+    ]
+  }
+
+  Query 5: 
+
+  search=* & $select= title,rating_average,instructor,role,level&facet=role & $filter=instructor eq 'Eileen Diaz' & $orderby = level,rating_average
+  https://<COGSEARCH_NAME>.search.windows.net/indexes/azuretable-index/docs?api-version=2021-04-30-Preview&search=*%20&%20%24select=%20title%2Crating_average%2Cinstructor%2Crole%2Clevel&facet=role%20&%20%24filter=instructor%20eq%20'Eileen%20Diaz'%20&%20%24orderby%20=%20level%2Crating_average
