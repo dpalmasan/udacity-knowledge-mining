@@ -191,32 +191,6 @@
         "fields": []
       },
       {
-        "name": "people",
-        "type": "Collection(Edm.String)",
-        "facetable": false,
-        "filterable": false,
-        "retrievable": true,
-        "searchable": true,
-        "analyzer": "standard.lucene",
-        "indexAnalyzer": null,
-        "searchAnalyzer": null,
-        "synonymMaps": [],
-        "fields": []
-      },
-      {
-        "name": "organizations",
-        "type": "Collection(Edm.String)",
-        "facetable": false,
-        "filterable": false,
-        "retrievable": true,
-        "searchable": true,
-        "analyzer": "standard.lucene",
-        "indexAnalyzer": null,
-        "searchAnalyzer": null,
-        "synonymMaps": [],
-        "fields": []
-      },
-      {
         "name": "keyphrases",
         "type": "Collection(Edm.String)",
         "facetable": false,
@@ -230,106 +204,12 @@
         "fields": []
       },
       {
-        "name": "pii_entities",
-        "type": "Collection(Edm.ComplexType)",
-        "analyzer": null,
-        "synonymMaps": [],
-        "fields": [
-          {
-            "name": "text",
-            "type": "Edm.String",
-            "facetable": false,
-            "filterable": false,
-            "key": false,
-            "retrievable": true,
-            "searchable": true,
-            "sortable": false,
-            "analyzer": "standard.lucene",
-            "indexAnalyzer": null,
-            "searchAnalyzer": null,
-            "synonymMaps": [],
-            "fields": []
-          },
-          {
-            "name": "type",
-            "type": "Edm.String",
-            "facetable": false,
-            "filterable": false,
-            "key": false,
-            "retrievable": true,
-            "searchable": true,
-            "sortable": false,
-            "analyzer": "standard.lucene",
-            "indexAnalyzer": null,
-            "searchAnalyzer": null,
-            "synonymMaps": [],
-            "fields": []
-          },
-          {
-            "name": "subtype",
-            "type": "Edm.String",
-            "facetable": false,
-            "filterable": false,
-            "key": false,
-            "retrievable": true,
-            "searchable": true,
-            "sortable": false,
-            "analyzer": "standard.lucene",
-            "indexAnalyzer": null,
-            "searchAnalyzer": null,
-            "synonymMaps": [],
-            "fields": []
-          },
-          {
-            "name": "offset",
-            "type": "Edm.Int32",
-            "facetable": false,
-            "filterable": false,
-            "retrievable": true,
-            "sortable": false,
-            "analyzer": null,
-            "indexAnalyzer": null,
-            "searchAnalyzer": null,
-            "synonymMaps": [],
-            "fields": []
-          },
-          {
-            "name": "length",
-            "type": "Edm.Int32",
-            "facetable": false,
-            "filterable": false,
-            "retrievable": true,
-            "sortable": false,
-            "analyzer": null,
-            "indexAnalyzer": null,
-            "searchAnalyzer": null,
-            "synonymMaps": [],
-            "fields": []
-          },
-          {
-            "name": "score",
-            "type": "Edm.Double",
-            "facetable": false,
-            "filterable": false,
-            "retrievable": true,
-            "sortable": false,
-            "analyzer": null,
-            "indexAnalyzer": null,
-            "searchAnalyzer": null,
-            "synonymMaps": [],
-            "fields": []
-          }
-        ]
-      },
-      {
-        "name": "masked_text",
-        "type": "Edm.String",
+        "name": "people",
+        "type": "Collection(Edm.String)",
         "facetable": false,
-        "filterable": false,
-        "key": false,
+        "filterable": true,
         "retrievable": true,
         "searchable": true,
-        "sortable": false,
         "analyzer": "standard.lucene",
         "indexAnalyzer": null,
         "searchAnalyzer": null,
@@ -353,5 +233,5 @@
     "encryptionKey": null,
     "semantic": null,
     "normalizers": [],
-    "@odata.etag": "\"0x8DA35BDF3733BE5\""
+    "@odata.etag": "\"0x8DA364EF6473D91\""
   }
