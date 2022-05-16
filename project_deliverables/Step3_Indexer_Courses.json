@@ -1,0 +1,31 @@
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/$metadata#indexers/$entity",
+    "@odata.etag": "\"0x8DA364911310276\"",
+    "name": "azuretable-indexer",
+    "description": "",
+    "dataSourceName": "hr-courses",
+    "skillsetName": "azuretable-skillset",
+    "targetIndexName": "azuretable-index",
+    "disabled": null,
+    "schedule": null,
+    "parameters": {
+      "batchSize": null,
+      "maxFailedItems": 0,
+      "maxFailedItemsPerBatch": 0,
+      "base64EncodeKeys": false,
+      "configuration": {}
+    },
+    "fieldMappings": [],
+    "outputFieldMappings": [
+      {
+        "sourceFieldName": "/document/PartitionKey/keyphrases",
+        "targetFieldName": "keyphrases"
+      },
+      {
+        "sourceFieldName": "/document/instructor/entities",
+        "targetFieldName": "entities"
+      }
+    ],
+    "cache": null,
+    "encryptionKey": null
+  }

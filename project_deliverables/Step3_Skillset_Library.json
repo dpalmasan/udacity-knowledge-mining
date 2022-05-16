@@ -1,0 +1,108 @@
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/$metadata#skillsets/$entity",
+    "@odata.etag": "\"0x8DA36B5741A2773\"",
+    "name": "azureblob-skillset",
+    "description": "Skillset created from the portal. skillsetName: azureblob-skillset; contentField: content; enrichmentGranularity: document; knowledgeStoreStorageAccount: ;",
+    "skills": [
+      {
+        "@odata.type": "#Microsoft.Skills.Text.V3.EntityRecognitionSkill",
+        "name": "#1",
+        "description": null,
+        "context": "/document/content",
+        "categories": [
+          "Product",
+          "PhoneNumber",
+          "Person",
+          "Quantity",
+          "Organization",
+          "IPAddress",
+          "URL",
+          "Email",
+          "Event",
+          "Skill",
+          "Location",
+          "PersonType",
+          "Address",
+          "DateTime"
+        ],
+        "defaultLanguageCode": "en",
+        "minimumPrecision": null,
+        "modelVersion": null,
+        "inputs": [
+          {
+            "name": "text",
+            "source": "/document/content"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "persons",
+            "targetName": "people"
+          }
+        ]
+      },
+      {
+        "@odata.type": "#Microsoft.Skills.Custom.WebApiSkill",
+        "name": "Title Extractor",
+        "description": "Extracts title from paper",
+        "context": "/document",
+        "uri": "https://hr-materials-text-extractor.azurewebsites.net/api/extracttitle",
+        "httpMethod": "POST",
+        "timeout": "PT30S",
+        "batchSize": 10,
+        "degreeOfParallelism": 1,
+        "inputs": [
+          {
+            "name": "metadata_storage_name",
+            "source": "/document/metadata_storage_name"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "articleName",
+            "targetName": "articleName"
+          }
+        ],
+        "httpHeaders": {}
+      },
+      {
+        "@odata.type": "#Microsoft.Skills.Custom.WebApiSkill",
+        "name": "Springer Lookup",
+        "description": "Extracts paper metadata from springer",
+        "context": "/document",
+        "uri": "https://hr-courses-springer.azurewebsites.net/api/springerlookup?code=RPM2bUBuMTjCCdvw_NvzYASzBmVa5f31ZDPIFFa_r6GXAzFuRNFkSw%3D%3D",
+        "httpMethod": "POST",
+        "timeout": "PT30S",
+        "batchSize": 10,
+        "degreeOfParallelism": 1,
+        "inputs": [
+          {
+            "name": "articleName",
+            "source": "/document/articleName"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "publicationName",
+            "targetName": "publicationName"
+          },
+          {
+            "name": "publisher",
+            "targetName": "publisher"
+          },
+          {
+            "name": "doi",
+            "targetName": "doi"
+          },
+          {
+            "name": "publicationDate",
+            "targetName": "publicationDate"
+          }
+        ],
+        "httpHeaders": {}
+      }
+    ],
+    "cognitiveServices": null,
+    "knowledgeStore": null,
+    "encryptionKey": null
+  }

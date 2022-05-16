@@ -1,0 +1,380 @@
+# Query 1: Results enriched with instructor's info
+
+search=* & $filter = instructor eq 'Eileen Diaz'
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 1,
+        "PartitionKey": "company-moodle",
+        "Timestamp": "2022-05-13T02:18:03.125Z",
+        "Key": "company-moodle278d299e-ef0e-47fb-8e98-5a31a073519c",
+        "duration": 2,
+        "instructor": "Eileen Diaz",
+        "level": "advanced",
+        "product": "SQL",
+        "rating_average": 4.8,
+        "rating_count": 115,
+        "role": "developer",
+        "source": "Company Moodle",
+        "title": "Security for database code",
+        "keyphrases": [
+          "company",
+          "moodle"
+        ],
+        "matchedEntities": null,
+        "entities": "[{\"name\":\"Eileen Diaz\",\"description\":\"Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time.\",\"matches\":[{\"text\":\"eileen diaz\",\"offset\":0,\"length\":11,\"matchDistance\":0.0}]}]"
+      },
+      {
+        "@search.score": 1,
+        "PartitionKey": "company-moodle",
+        "Timestamp": "2022-05-13T02:18:05.098Z",
+        "Key": "company-moodle6b5d3f55-eb02-499d-9775-2e0e25659e07",
+        "duration": 1,
+        "instructor": "Eileen Diaz",
+        "level": "intermediate",
+        "product": "NA",
+        "rating_average": 4.3,
+        "rating_count": 24,
+        "role": "architect",
+        "source": "Company Moodle",
+        "title": "Ethics in AI",
+        "keyphrases": [
+          "company",
+          "moodle"
+        ],
+        "matchedEntities": null,
+        "entities": "[{\"name\":\"Eileen Diaz\",\"description\":\"Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time.\",\"matches\":[{\"text\":\"eileen diaz\",\"offset\":0,\"length\":11,\"matchDistance\":0.0}]}]"
+      },
+      {
+        "@search.score": 1,
+        "PartitionKey": "company-moodle",
+        "Timestamp": "2022-05-13T02:18:03.491Z",
+        "Key": "company-moodle85ee725b-4ae0-4719-8785-ddf99e19faf1",
+        "duration": 3,
+        "instructor": "Eileen Diaz",
+        "level": "advanced",
+        "product": "SQL",
+        "rating_average": 4.3,
+        "rating_count": 45,
+        "role": "admin",
+        "source": "Company Moodle",
+        "title": "Security for database admins",
+        "keyphrases": [
+          "company",
+          "moodle"
+        ],
+        "matchedEntities": null,
+        "entities": "[{\"name\":\"Eileen Diaz\",\"description\":\"Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time.\",\"matches\":[{\"text\":\"eileen diaz\",\"offset\":0,\"length\":11,\"matchDistance\":0.0}]}]"
+      },
+      {
+        "@search.score": 1,
+        "PartitionKey": "company-moodle",
+        "Timestamp": "2022-05-13T02:18:05.898Z",
+        "Key": "company-moodle9df844fd-eefe-4880-8341-936732174bb5",
+        "duration": 3,
+        "instructor": "Eileen Diaz",
+        "level": "advanced",
+        "product": "NA",
+        "rating_average": 4.2,
+        "rating_count": 95,
+        "role": "architect",
+        "source": "Company Moodle",
+        "title": "Encryption and security",
+        "keyphrases": [
+          "company",
+          "moodle"
+        ],
+        "matchedEntities": null,
+        "entities": "[{\"name\":\"Eileen Diaz\",\"description\":\"Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time.\",\"matches\":[{\"text\":\"eileen diaz\",\"offset\":0,\"length\":11,\"matchDistance\":0.0}]}]"
+      },
+      {
+        "@search.score": 1,
+        "PartitionKey": "company-moodle",
+        "Timestamp": "2022-05-13T02:18:03.848Z",
+        "Key": "company-moodled3f0c955-ac6e-4ced-b91b-ffcef3e8cede",
+        "duration": 3,
+        "instructor": "Eileen Diaz",
+        "level": "intermediate",
+        "product": "NA",
+        "rating_average": 4.4,
+        "rating_count": 132,
+        "role": "developer",
+        "source": "Company Moodle",
+        "title": "Code security",
+        "keyphrases": [
+          "company",
+          "moodle"
+        ],
+        "matchedEntities": null,
+        "entities": "[{\"name\":\"Eileen Diaz\",\"description\":\"Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time.\",\"matches\":[{\"text\":\"eileen diaz\",\"offset\":0,\"length\":11,\"matchDistance\":0.0}]}]"
+      }
+    ]
+}
+
+# Query 2: search=* & $select=articleName,doi
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 1,
+        "articleName": "Discriminated by an algorithm: a systematic review of discrimination and fairness by algorithmic decision making in the context of HR recruitment and HR development",
+        "doi": "10.1007/s40685-020-00134-w"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Machine learning for digital try-on: Challenges and progress",
+        "doi": "10.1007/s41095-020-0189-1"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "A systematic review on keystroke dynamics",
+        "doi": "10.1007/s13173-013-0117-7"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Augmented reality virtual glasses try-on technology based on iOS platform",
+        "doi": "10.1186/s13640-018-0373-8"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "A classification method for social information of sellers on social network",
+        "doi": "10.1186/s13640-020-00545-z"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "QER: a new feature selection method for sentiment analysis",
+        "doi": "10.1186/s13673-018-0135-8"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Mobile marketing recommendation method based on user location feedback",
+        "doi": "10.1186/s13673-019-0177-6"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Multi technique amalgamation for enhanced information identification with content based image data",
+        "doi": "10.1186/s40064-015-1515-4"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Sentiment analysis and the complex natural language",
+        "doi": "10.1186/s40294-016-0016-9"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Extraction methods for uncertain inference rules by ant colony optimization",
+        "doi": "10.1186/s40467-015-0033-9"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Reusable components for online reputation systems",
+        "doi": "10.1186/s40493-015-0015-3"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Toward a testbed for evaluating computational trust models: experiments and analysis",
+        "doi": "10.1186/s40493-015-0019-z"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Privacy preservation techniques in big data analytics: a survey",
+        "doi": "10.1186/s40537-018-0141-8"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Mining aspects of customer's review on the social network",
+        "doi": "10.1186/s40537-019-0184-5"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Big data stream analysis: a systematic literature review",
+        "doi": "10.1186/s40537-019-0210-7"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Context-aware rule learning from smartphone data: survey, challenges and future directions",
+        "doi": "10.1186/s40537-019-0258-4"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Improving prediction with enhanced Distributed Memory-based Resilient Dataset Filter",
+        "doi": "10.1186/s40537-020-00292-y"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Local regression transfer learning with applications to users' psychological characteristics prediction",
+        "doi": "10.1007/s40708-015-0017-z"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Technological advancements and opportunities in Neuromarketing: a systematic review",
+        "doi": "10.1186/s40708-020-00109-x"
+      },
+      {
+        "@search.score": 1,
+        "articleName": "Detecting problematic transactions in a consumer-to-consumer e-commerce network",
+        "doi": "10.1007/s41109-020-00330-x"
+      }
+    ]
+  }
+
+# Query 3:
+
+search=* & $select=articleName,doi, publicationDate & $filter= publicationDate eq '2020-11-01'
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 1,
+        "articleName": "Discriminated by an algorithm: a systematic review of discrimination and fairness by algorithmic decision making in the context of HR recruitment and HR development",
+        "doi": "10.1007/s40685-020-00134-w",
+        "publicationDate": "2020-11-01"
+      }
+    ]
+  }
+
+
+# Query 4:
+
+search=machine learning & $orderby= title & $select=articleName,doi, publicationDate
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 0.29471266,
+        "articleName": "A classification method for social information of sellers on social network",
+        "doi": "10.1186/s13640-020-00545-z",
+        "publicationDate": "2021-01-14"
+      },
+      {
+        "@search.score": 0.14676802,
+        "articleName": "A systematic review on keystroke dynamics",
+        "doi": "10.1007/s13173-013-0117-7",
+        "publicationDate": "2013-11-01"
+      },
+      {
+        "@search.score": 0.19912487,
+        "articleName": "Augmented reality virtual glasses try-on technology based on iOS platform",
+        "doi": "10.1186/s13640-018-0373-8",
+        "publicationDate": "2018-11-27"
+      },
+      {
+        "@search.score": 0.17459601,
+        "articleName": "Big data stream analysis: a systematic literature review",
+        "doi": "10.1186/s40537-019-0210-7",
+        "publicationDate": "2019-06-06"
+      },
+      {
+        "@search.score": 1.7550081,
+        "articleName": "Context-aware rule learning from smartphone data: survey, challenges and future directions",
+        "doi": "10.1186/s40537-019-0258-4",
+        "publicationDate": "2019-10-31"
+      },
+      {
+        "@search.score": 0.20914325,
+        "articleName": "Detecting problematic transactions in a consumer-to-consumer e-commerce network",
+        "doi": "10.1007/s41109-020-00330-x",
+        "publicationDate": "2020-11-16"
+      },
+      {
+        "@search.score": 0.21482211,
+        "articleName": "Discriminated by an algorithm: a systematic review of discrimination and fairness by algorithmic decision making in the context of HR recruitment and HR development",
+        "doi": "10.1007/s40685-020-00134-w",
+        "publicationDate": "2020-11-01"
+      },
+      {
+        "@search.score": 0.25081864,
+        "articleName": "Extraction methods for uncertain inference rules by ant colony optimization",
+        "doi": "10.1186/s40467-015-0033-9",
+        "publicationDate": "2015-05-14"
+      },
+      {
+        "@search.score": 0.286928,
+        "articleName": "Improving prediction with enhanced Distributed Memory-based Resilient Dataset Filter",
+        "doi": "10.1186/s40537-020-00292-y",
+        "publicationDate": "2020-02-28"
+      },
+      {
+        "@search.score": 1.7306726,
+        "articleName": "Local regression transfer learning with applications to users' psychological characteristics prediction",
+        "doi": "10.1007/s40708-015-0017-z",
+        "publicationDate": "2015-09-01"
+      },
+      {
+        "@search.score": 4.711023,
+        "articleName": "Machine learning for digital try-on: Challenges and progress",
+        "doi": "10.1007/s41095-020-0189-1",
+        "publicationDate": "2021-06-01"
+      },
+      {
+        "@search.score": 0.25081864,
+        "articleName": "Mining aspects of customer's review on the social network",
+        "doi": "10.1186/s40537-019-0184-5",
+        "publicationDate": "2019-02-28"
+      },
+      {
+        "@search.score": 0.251313,
+        "articleName": "Mobile marketing recommendation method based on user location feedback",
+        "doi": "10.1186/s13673-019-0177-6",
+        "publicationDate": "2019-05-01"
+      },
+      {
+        "@search.score": 0.2170687,
+        "articleName": "Multi technique amalgamation for enhanced information identification with content based image data",
+        "doi": "10.1186/s40064-015-1515-4",
+        "publicationDate": "2015-12-01"
+      },
+      {
+        "@search.score": 0.24074891,
+        "articleName": "Privacy preservation techniques in big data analytics: a survey",
+        "doi": "10.1186/s40537-018-0141-8",
+        "publicationDate": "2018-09-22"
+      },
+      {
+        "@search.score": 0.2538583,
+        "articleName": "QER: a new feature selection method for sentiment analysis",
+        "doi": "10.1186/s13673-018-0135-8",
+        "publicationDate": "2018-05-09"
+      },
+      {
+        "@search.score": 0.14676802,
+        "articleName": "Reusable components for online reputation systems",
+        "doi": "10.1186/s40493-015-0015-3",
+        "publicationDate": "2015-05-13"
+      },
+      {
+        "@search.score": 0.2849893,
+        "articleName": "Sentiment analysis and the complex natural language",
+        "doi": "10.1186/s40294-016-0016-9",
+        "publicationDate": "2016-02-03"
+      },
+      {
+        "@search.score": 0.2802491,
+        "articleName": "Technological advancements and opportunities in Neuromarketing: a systematic review",
+        "doi": "10.1186/s40708-020-00109-x",
+        "publicationDate": "2020-09-21"
+      }
+    ]
+  }
+
+# Query 5:
+
+search=machine learning & $filter= publicationName eq 'Business Research' & $select=articleName,doi, publicationDate, publicationName
+
+{
+    "@odata.context": "https://hr-materials-cogsearch.search.windows.net/indexes('azureblob-index')/$metadata#docs(*)",
+    "value": [
+      {
+        "@search.score": 0.21482211,
+        "articleName": "Discriminated by an algorithm: a systematic review of discrimination and fairness by algorithmic decision making in the context of HR recruitment and HR development",
+        "publicationName": "Business Research",
+        "doi": "10.1007/s40685-020-00134-w",
+        "publicationDate": "2020-11-01"
+      }
+    ]
+  }
