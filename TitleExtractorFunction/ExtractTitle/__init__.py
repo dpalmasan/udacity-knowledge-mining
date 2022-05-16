@@ -52,7 +52,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             output_values.append(
                 {
                     "recordId": record_id,
-                    "data": {"title": title},
+                    "data": {"articleName": title},
                     "errors": None,
                     "warnings": None,
                 }
