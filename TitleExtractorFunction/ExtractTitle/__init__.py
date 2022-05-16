@@ -8,7 +8,7 @@ import azure.functions as func
 TITLES_MAPPING = {
     "Köchling-Wehner2020_Article_DiscriminatedByAnAlgorithmASys.pdf": (
         "Discriminated by an algorithm: a systematic review "
-        "of discrimination and fairness by algorithmic decisionmaking"
+        "of discrimination and fairness by algorithmic decision making "
         "in the context of HR recruitment and HR "
         "development"
     ),
